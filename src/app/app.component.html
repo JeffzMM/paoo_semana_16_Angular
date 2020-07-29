@@ -1,0 +1,41 @@
+<div class="container" appCorDeFundo>
+
+
+  <div class="row">
+    <div class="form-group col-12">
+      <br>
+      <h2 for="lembreteInputText" class="text-center">Anotações</h2>
+      <br><br>
+      <input type="text" id="lembreteinputText" placeholder="Digite sua anotação" class="form-control p-4" [(ngModel)]= "lembrete" >
+      <br>
+    </div>
+  </div>
+
+
+
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary btn-block"  (click) = "salvar()">Salvar anotação</button>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-striped table-hover mt-3">
+          <thead>
+            <tr>
+              <th class="text-center">Anotações Salvas</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let lembrete of lembretes">
+                <td class="text-center">{{lembrete}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>   
+    </div>
+
+
+</div>
